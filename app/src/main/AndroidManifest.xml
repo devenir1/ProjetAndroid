@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hyard.r.dofus">
+
+    <uses-sdk
+        android:maxSdkVersion="21"
+        android:minSdkVersion="15" />
+
+    <!--Permissions de l'application-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--Classes dofus-->
+        <activity android:name=".ListeClasseActivity" android:parentActivityName=".MainActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".DetailClasseActivity" android:parentActivityName=".ListeClasseActivity" android:screenOrientation="portrait"></activity>
+
+        <!--Métiers dofus-->
+        <activity android:name=".ListeMetierActivity" android:parentActivityName=".MainActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".DetailMetierActivity" android:parentActivityName=".ListeMetierActivity" android:screenOrientation="portrait"></activity>
+
+        <!--Dofus-->
+        <activity android:name=".ListeDofusActivity" android:parentActivityName=".MainActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".DetailDofusActivity" android:parentActivityName=".ListeDofusActivity" android:screenOrientation="portrait"></activity>
+
+        <!--Pages bonus-->
+        <activity android:name=".CreditActivity" android:parentActivityName=".MainActivity" android:screenOrientation="portrait"></activity>
+
+    </application>
+
+</manifest>
